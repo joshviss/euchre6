@@ -8,10 +8,14 @@ inGame
 
 Logic:
 Card (Compare function - ranking (trump), )
-hand (player score, )
+hand (player score, contents of hand)
 deck (deck cards (includes two normal decks), )
 host (to give people cards and control the deck, )
-game (score, How many AI, Bet, Shooting, )
+round (
+-holds the data for the round 
+-(how to calculate trump, Bet, Shooting, who's winning the round)
+)
+game (score, How many AI,  )
 
 
 AI:
