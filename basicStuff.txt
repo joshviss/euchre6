@@ -20,7 +20,9 @@ game (score, How many AI,  )
 
 AI:
 Basic AI
-
+-plays lowest card to beat current winning card (unless team is winning)
+-plays random legal card
+-plays highest card to beat current winning card (unless team is winning)
 
 Networking:
 Solo vs Local vs Internet
