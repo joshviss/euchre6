@@ -13,6 +13,18 @@ public class Round {
 
         Deck deck = new Deck();
 
+        deck.DealCards(mHands);
 
+        //TODO: rest of function
+        //TODO: bidding, trumps
+    }
+
+    public Hand getHand(int player) {
+        return mHands[player];
+    }
+
+    public int getScore(int player) {
+        return 0;
+        //TODO: implement
     }
 }

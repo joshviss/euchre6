@@ -27,4 +27,9 @@ public class Hand {
         Card toPlay = mCards.remove(card);
         return toPlay;
     }
+
+    public void moveCard(int oldPos, int newPos) {
+        //TODO: implment, used when player rearranges their hand
+    }
+
 }

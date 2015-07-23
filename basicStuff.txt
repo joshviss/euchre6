@@ -4,6 +4,7 @@ Rules screen (how to play)
 inGame
 -Players played card and their name
 -Banner ad at the top
+-Cards in Hand arrangeable manually
 
 
 Logic:
