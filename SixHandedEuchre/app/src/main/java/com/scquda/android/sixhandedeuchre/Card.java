@@ -5,12 +5,26 @@ package com.scquda.android.sixhandedeuchre;
  * Description:
  */
 public class Card {
-    //Rank of the card
-    public enum Rank {TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE};
 
+    //Rank of the card
+    public enum Rank {NINE, TEN, JACK, QUEEN, KING, ACE};
     //Suit of the card
     public enum Suit {DIAMOND, HEART, SPADE, CLUB};
 
-    public Suit cardSuit;
-    public Rank cardRank;
+    private Rank mRank;
+    private Suit mSuit;
+
+    Card(Rank rank, Suit suit) {
+        mRank = rank;
+        mSuit = suit;
+    }
+
+    public Rank getRank() {
+        return mRank;
+    }
+
+    public Suit getSuit() {
+        return mSuit;
+    }
+
 }
