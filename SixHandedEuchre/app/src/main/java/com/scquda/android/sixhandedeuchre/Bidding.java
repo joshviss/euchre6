@@ -5,7 +5,7 @@ package com.scquda.android.sixhandedeuchre;
  */
 public class Bidding {
 
-    private Trump mTrump;
+    private SuitTrump mTrump;
     private int mBiddingPlayer;
 
     public enum TrumpType {SUIT, HIGH, LOW};

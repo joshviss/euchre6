@@ -3,9 +3,10 @@ package com.scquda.android.sixhandedeuchre;
 /**
  * Created by Scott on 7/22/2015.
  */
-public class LowTrump implements Trump {
+public class LowTrump extends SuitTrump {
 
     public LowTrump() {
+        super(Card.Suit.CLUB);
     }
 
     public int Compare(Card first, Card second) {

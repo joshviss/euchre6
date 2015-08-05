@@ -11,7 +11,9 @@ public class Card {
     //Rank of the card
     public enum Rank {NINE, TEN, JACK, QUEEN, KING, ACE};
     //Suit of the card
-    public enum Suit {DIAMOND, HEART, SPADE, CLUB};
+    public enum Suit {DIAMOND, SPADE, HEART, CLUB};
+    //Color
+    public enum Color {RED, BLACK};
 
     private Rank mRank;
     private Suit mSuit;
@@ -27,6 +29,10 @@ public class Card {
 
     public Suit getSuit() {
         return mSuit;
+    }
+
+    public Color getColor() {
+        return Color.values()[mSuit.ordinal()%2];
     }
 
     public int getImageID(Context context) {

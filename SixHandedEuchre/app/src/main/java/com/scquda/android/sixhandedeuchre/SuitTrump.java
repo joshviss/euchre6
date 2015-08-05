@@ -3,7 +3,11 @@ package com.scquda.android.sixhandedeuchre;
 /**
  * Created by Scott on 7/22/2015.
  */
-public class SuitTrump implements Trump{
+public class SuitTrump
+{
+    //Compare() returns one of these values as the winner
+    public static final int FIRST = 1;
+    public static final int SECOND = 2;
 
     private Card.Suit mTrumpSuit;
 
