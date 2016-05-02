@@ -8,15 +8,24 @@ public class Game {
     //Function calls here should do all the background logic to get what is needed
 
     public static final int NUM_PLAYERS = 6;
+	
+    // Type of game
+    public static final enum AvailableGameTypes {LOCAL, SINGLE, WORLD};
 
     private int mScores[];
+	private int gameType;
     private Round mCurrentRound;
 
-    public Game() {
+    public Game(int type) {
+		gameType = type;
+		
         mScores = new int[NUM_PLAYERS];
         for (int i = 0; i < NUM_PLAYERS; i++) {
             mScores[i] = 0;
         }
+		
+		mCurrentRound = new Round(AvailableGameTypes.SINGLE);
+		
     }
 
     public void playCard(int player, int card) {

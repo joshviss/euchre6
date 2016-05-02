@@ -16,7 +16,18 @@ public class SuitTrump
     }
 
     public int Compare(Card first, Card second) {
-        //We can assume the first card is the leading suit (or trump)
-        return FIRST;  //TODO: fill in function
+		// First card is trump
+		// Second card is trump
+		// Neither are trump, traditional comparison. If the same card, first always wins
+		if (first.getSuit().equals(mTrumpSuit)) && !second.getSuit().equals(mTrumpSuit)){
+			return FIRST;
+		}if (!first.getSuit().equals(mTrumpSuit)) && second.getSuit().equals(mTrumpSuit)){
+			return SECOND;
+		}if (first.getSuit().equals(mTrumpSuit)) && second.getSuit().equals(mTrumpSuit)){
+			if (first.getRank() >= second.getRank){
+				return FIRST;
+			}
+			return SECOND;
+		}
     }
 }

@@ -7,17 +7,24 @@ import java.util.Vector;
  */
 public class Hand {
     private Vector<Card> mCards;
+	private int owner;
 
-    Hand(Card[] starting) {
+    Hand(int playerNum) {
+		// make an empty hand
         mCards = new Vector<Card>();
-        for (int i = 0; i < starting.length; i++) {
-            mCards.add(starting[i]);
-        }
+		owner = playerNum;
     }
 
     public int getHandSize() {
         return mCards.size();
     }
+    public int getOwner() {
+        return owner();
+    }
+	
+	public void addCard(Card card){
+		mCards.add(card);
+	}
 
     public Card getCard(int card) {
         return mCards.elementAt(card);

@@ -10,7 +10,13 @@ public class HighTrump extends SuitTrump {
     }
 
     public int Compare(Card first, Card second) {
-        //We can assume the first card is the leading suit (or trump)
-        return FIRST;  //TODO: fill in function
+		if (first.getSuit() == second.getSuit()){
+			if (first.getRank() >= second.getRank){
+					return FIRST;
+			}else{
+				return SECOND;
+			}
+		}
+		return FIRST;
     }
 }
