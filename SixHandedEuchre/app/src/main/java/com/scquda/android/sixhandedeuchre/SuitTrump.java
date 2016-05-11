@@ -16,18 +16,25 @@ public class SuitTrump
     }
 
     public int Compare(Card first, Card second) {
-		// First card is trump
-		// Second card is trump
-		// Neither are trump, traditional comparison. If the same card, first always wins
-		if (first.getSuit().equals(mTrumpSuit)) && !second.getSuit().equals(mTrumpSuit)){
-			return FIRST;
-		}if (!first.getSuit().equals(mTrumpSuit)) && second.getSuit().equals(mTrumpSuit)){
-			return SECOND;
-		}if (first.getSuit().equals(mTrumpSuit)) && second.getSuit().equals(mTrumpSuit)){
-			if (first.getRank() >= second.getRank){
-				return FIRST;
-			}
-			return SECOND;
-		}
+        // First card is trump
+        // Second card is trump
+        // Neither are trump, traditional comparison. If the same card, first always wins
+        if (first.getTrumpSuit().equals(mTrumpSuit)) && !second.getTrumpSuit().equals(mTrumpSuit)){
+            return FIRST;
+        }else if (!first.getTrumpSuit().equals(mTrumpSuit)) && second.getTrumpSuit().equals(mTrumpSuit)){
+            return SECOND;
+        }else if (first.getTrumpSuit().equals(mTrumpSuit)) && second.getTrumpSuit().equals(mTrumpSuit)){
+            if (first.getRank() >= second.getRank()){
+                return FIRST;
+            }
+            return SECOND;
+        }else if (first.getTrumpSuit() != second.getTrumpSuit()) {
+            return FIRST;
+        } else {
+            if (first.getRank() >= second.getRank()){
+                return FIRST;
+            }
+            return SECOND;
+        }
     }
 }

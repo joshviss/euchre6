@@ -7,12 +7,12 @@ import java.util.Vector;
  */
 public class Hand {
     private Vector<Card> mCards;
-	private int owner;
+    private int owner;
 
     Hand(int playerNum) {
-		// make an empty hand
+        // make an empty hand
         mCards = new Vector<Card>();
-		owner = playerNum;
+        owner = playerNum;
     }
 
     public int getHandSize() {
@@ -21,10 +21,10 @@ public class Hand {
     public int getOwner() {
         return owner();
     }
-	
-	public void addCard(Card card){
-		mCards.add(card);
-	}
+    
+    public void addCard(Card card){
+        mCards.add(card);
+    }
 
     public Card getCard(int card) {
         return mCards.elementAt(card);

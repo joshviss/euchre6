@@ -30,6 +30,19 @@ public class Card {
     public Suit getSuit() {
         return mSuit;
     }
+    
+    //returns the Suit of this card, taking trump into consideration
+    //ie. If of partner suit and is a JACK, then the card is trump suit
+    public Suit getTrumpSuit(Suit trump) {
+        //checks if jack and partner suit
+        if(mRank == Rank.JACK) {
+            //checks if partner suit
+            if((mSuit % 2) == (trump % 2)) {
+                return trump;
+            }
+        }
+        return mSuit;
+    }
 
     public Color getColor() {
         return Color.values()[mSuit.ordinal()%2];

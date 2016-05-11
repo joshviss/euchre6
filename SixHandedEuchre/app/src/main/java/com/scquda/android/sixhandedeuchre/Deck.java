@@ -31,16 +31,16 @@ public class Deck {
 
     private void Shuffle() {
         List<Card> list = Arrays.asList(mCards);
-		Collections.shuffle(list);
-		mCards = list.toArray();
+        Collections.shuffle(list);
+        mCards = list.toArray();
     }
 
     public void DealCards(Hand[] theHands) {
-		// 8 cards in each player's hand
-		for (int j = 0; j < theHands.length +; j++){
-			for (int i = 0; i < 8; i++){
-				theHands[j].addCard(mCards[i + (8 * j)]);
-			}
-		}
+        // 8 cards in each player's hand
+        for (int j = 0; j < theHands.length +; j++){
+            for (int i = 0; i < 8; i++){
+                theHands[j].addCard(mCards[i + (8 * j)]);
+            }
+        }
     }
 }

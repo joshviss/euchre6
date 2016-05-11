@@ -10,13 +10,13 @@ public class LowTrump extends SuitTrump {
     }
 
     public int Compare(Card first, Card second) {
-		if (first.getSuit() == second.getSuit()){
-			if (first.getRank() <= second.getRank){
-					return FIRST;
-			}else{
-				return SECOND;
-			}
-		}
-		return FIRST;
+        if (first.getSuit() == second.getSuit()){
+            if (first.getRank() <= second.getRank){
+                    return FIRST;
+            }else{
+                return SECOND;
+            }
+        }
+        return FIRST;
     }
 }
