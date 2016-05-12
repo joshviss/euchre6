@@ -2,6 +2,7 @@ package com.scquda.android.sixhandedeuchre;
 
 /**
  * Created by Scott on 7/22/2015.
+  * Edited by Josh on 5/11/2016
  */
 public class Deck {
 
@@ -35,11 +36,11 @@ public class Deck {
         mCards = list.toArray();
     }
 
-    public void DealCards(Hand[] theHands) {
+    public void DealCards(Player[] players) {
         // 8 cards in each player's hand
-        for (int j = 0; j < theHands.length +; j++){
+        for (int j = 0; j < players.length +; j++){
             for (int i = 0; i < 8; i++){
-                theHands[j].addCard(mCards[i + (8 * j)]);
+                players[j].addCard(mCards[i + (8 * j)]);
             }
         }
     }

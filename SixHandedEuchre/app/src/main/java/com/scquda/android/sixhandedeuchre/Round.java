@@ -2,12 +2,13 @@ package com.scquda.android.sixhandedeuchre;
 
 /**
  * Created by Scott on 7/22/2015.
+  * Edited by Josh on 5/11/2016
  */
 public class Round {
 
     private Bidding mCurrentBid;
     private int startingBidPlayer;
-    private Hand[] mHands;
+    private Player[] players;
     private int numTricks;
     private GameType gameType;
     
@@ -17,14 +18,14 @@ public class Round {
     public Round(GameType type) {
         gameType = type;
         Deck deck = new Deck();
-        mHands = new Hand[Game.NUM_PLAYERS];
+        player = new Player[Game.NUM_PLAYERS];
         int playerNum = 0;
         
         // Set which hand belongs to which player
         for (int i = 0; i < Game.NUM_PLAYERS; i++){
-            mHands[i] = new Hand(i)
+            players[i] = new Player(i)
         }
-        deck.DealCards(mHands);
+        deck.DealCards(players);
 
         //TODO: Randomize the starting player
         startingBidPlayer = 0;
@@ -54,8 +55,8 @@ public class Round {
         
     }
 
-    public Hand getHand(int player) {
-        return mHands[player];
+    public Player getPlayer(int playerNum) {
+        return players[playerNum];
     }
 
     public int getScore(int player) {
@@ -65,8 +66,8 @@ public class Round {
     
     private void reArrangeStartingPlayer(int newStartingPlayer){
         for (int i = 0; i < newStartingPlayer; i++){
-            mHands.add(mHands[0]);
-            mHands.remove(0);
+            players.add(players[0]);
+            players.remove(0);
         }
     }
 }

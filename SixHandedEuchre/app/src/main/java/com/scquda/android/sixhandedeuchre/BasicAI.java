@@ -2,20 +2,16 @@ package com.scquda.android.sixhandedeuchre;
 
 /**
  * Created by Scott on 8/4/2015.
+  * Edited by Josh on 5/11/2016
  */
-public class BasicAI {
-    private Hand mHand;
+public class BasicAI extends Player {
 
     public BasicAI() {
 
     }
 
-    public void setHand(Hand hand) {
-        mHand = hand;
-    }
-
     public Card playCard() {
         //Todo: implement logic
-        return mHand.playCard(0);
+        return hand.playCard(0);
     }
 }

@@ -16,14 +16,14 @@ public class Game {
     private int gameType;
     private Round mCurrentRound;
 
-    public Game(int type) {
-        gameType = type;
+    public Game(Players[] gamePlayers) {
         
+		//This will need to be changed TODO
         mScores = new int[NUM_PLAYERS];
-        for (int i = 0; i < NUM_PLAYERS; i++) {
+        for (int
+         i = 0; i < NUM_PLAYERS; i++) {
             mScores[i] = 0;
         }
-        
         mCurrentRound = new Round(AvailableGameTypes.SINGLE);
         
     }
