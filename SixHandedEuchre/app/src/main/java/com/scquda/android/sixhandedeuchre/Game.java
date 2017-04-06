@@ -9,8 +9,8 @@ public class Game {
 
     public static final int NUM_PLAYERS = 6;
     
-    // Type of game
-    public static final enum AvailableGameTypes {LOCAL, SINGLE, WORLD};
+    // Type of game (did have "final" keyword in it)
+    public static enum AvailableGameTypes {LOCAL, SINGLE, WORLD};
 
     private int mScores[];
     private int gameType;
